@@ -21,7 +21,7 @@ function App() {
       <Router>
       <NaviBar />
       <Switch>
-        <Route path="/" component={Home} />
+        <Route exact path="/" component={Home} />
         <Route path="/blog" component={Blog} />
         <Route path="/newpost" component={NewPost} />
       </Switch>
