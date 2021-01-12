@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'react-bootstrap';
 import NaviBar from './Components/Navibar';
+import Footer from './Components/Footer';
 
 import {
   BrowserRouter as Router,
@@ -26,6 +27,8 @@ function App() {
         <Route path="/newpost" component={NewPost} />
       </Switch>
       </Router>
+      <Footer /> 
+
     </div>
   );
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import Slider from './Components/Slider';
-import { Container, Row, Col, Card } from 'react-bootstrap';
-import boat from '../boat.jpg';
+import Jumbotron from './Components/Jumbotron';
+import { Container, Row } from 'react-bootstrap';
+
 
 
 export const Home = () => (
@@ -9,15 +10,12 @@ export const Home = () => (
    <Slider />
    <Container>
        <Row>
-           <Col>
-             <Card style={{width: '18rem'}}>
-               <Card.Img variant="top" src={{boat}}/>
-
-            </Card>
-           </Col>
+       
        </Row>
 
    </Container>
+   <Jumbotron />
+
 
    </div>
 )
