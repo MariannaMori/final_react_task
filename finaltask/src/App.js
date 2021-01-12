@@ -11,7 +11,7 @@ import {
 
 import {Home} from './Components/Main/Home';
 import {Blog} from './Components/Main/Blog';
-import {NewPost} from './Components/Main/NewPost';
+import NewPost from './Components/Main/NewPost';
 
 function App() {
   return (
