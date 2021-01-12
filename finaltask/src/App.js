@@ -1,13 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NaviBar from './Components/Header/Navibar';
-import Footer from './Components/Header/Footer';
+import Footer from './Components/Footer/Footer';
 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 import {Home} from './Components/Main/Home';
