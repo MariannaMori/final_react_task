@@ -1,6 +1,6 @@
 import React from 'react';
-import Slider from './Components/Slider';
-import Jumbotron from './Components/Jumbotron';
+import Slider from '../Header/Slider';
+import Jumbotron from '../Header/Jumbotron';
 import { Container, Row } from 'react-bootstrap';
 
 

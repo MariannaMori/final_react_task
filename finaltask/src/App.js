@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NaviBar from './Components/Navibar';
-import Footer from './Components/Footer';
+import NaviBar from './Components/Header/Navibar';
+import Footer from './Components/Header/Footer';
 
 import {
   BrowserRouter as Router,
@@ -10,9 +10,9 @@ import {
   Link
 } from "react-router-dom";
 
-import {Home} from './Home';
-import {Blog} from './Blog';
-import {NewPost} from './NewPost';
+import {Home} from './Components/Main/Home';
+import {Blog} from './Components/Main/Blog';
+import {NewPost} from './Components/Main/NewPost';
 
 function App() {
   return (
