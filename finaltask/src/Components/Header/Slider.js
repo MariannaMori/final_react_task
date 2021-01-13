@@ -1,43 +1,42 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import forest from '../Img/forest.jpg';
+import boat from '../Img/boat.jpg';
+import sail from '../Img/sail.jpg';
+import sunset from '../Img/sunset.jpg';
 
 
 export default function Slider() {
     return (
-    <Carousel>
-        <Carousel.Item style={{'height': '600px'}}>
-            <img
+        <Carousel>
+        <Carousel.Item>
+          <img
             className="d-block w-100"
-            src={forest}
+            src={boat}
             alt="First slide"
-            />
-            <Carousel.Caption>
-                <h3>React Blog</h3>
-                <p>Task 9</p>
-            </Carousel.Caption>       
+          />
+          <Carousel.Caption>
+            <h1>Explore</h1>
+          </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item style={{'height': '600px'}}>
-            <img
+        <Carousel.Item>
+          <img
             className="d-block w-100"
-            src={forest}
-            alt="First slide"
-            />
-            <Carousel.Caption>
-                <h3>React Blog</h3>
-                <p>Task 9</p>
-            </Carousel.Caption>       
+            src={sail}
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h1>Discover</h1>
+          </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item style={{'height': '600px'}}>
-            <img
+        <Carousel.Item>
+          <img
             className="d-block w-100"
-            src={forest}
-            alt="First slide"
-            />
-            <Carousel.Caption>
-                <h3>React Blog</h3>
-                <p>Task 9</p>
-            </Carousel.Caption>       
+            src={sunset}
+            alt="Third slide"
+          />
+          <Carousel.Caption>
+            <h1>Learn</h1>
+          </Carousel.Caption>
         </Carousel.Item>
-    </Carousel>
+      </Carousel>
 )}

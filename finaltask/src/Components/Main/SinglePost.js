@@ -1,4 +1,3 @@
-import Axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
@@ -13,20 +12,20 @@ const SinglePost = () => {
         .get("http://localhost:3001/posts/" + id)
         .then((res) => setPost(res.data));
     }
-  });
+  })
 
   let postData = undefined;
 
   if (id) {
-    postData = <h1>Loading....</h1>;
+    postData = <h1>Loading...</h1>
   }
 
   if (post) {
     postData = (
       <div>
-        {post.title} {post.author} {post.desc}
+        {post.title} {post.author} {post.desc} {post.img}
       </div>
-    );
+    )
   }
 
   return postData;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Form, Button, Col } from 'react-bootstrap';
+import SuccessMessage from './SuccessMessage'
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
@@ -10,25 +11,29 @@ const NewPost = () => {
     img: "",
   });
 
-  const changeValueHandler = (e) => {
+  const changeValueHandler = (event) => {
     setNewPost({
       ...newPost,
-      [e.target.name]: e.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
-  const addPostHandler = (e) => {
-    e.preventDefault();
+  const [successMessage, setSuccessMessage] = useState(false);
+
+  const addPostShowSuccess = (event) => {
+    event.preventDefault();
+
+    setSuccessMessage(true);
 
     axios.post("http://localhost:3001/posts", newPost).then((response) => {
-      console.log(response.data);
-    });
+      console.log(response.data);      
+    });  
   };
-
+  
   return (
     <>
     <h1>Add new post</h1>
-    <form className="newPost" onSubmit={addPostHandler}>
+    <form className="newPost" onSubmit={addPostShowSuccess}>
       <Form>
   <Form.Group controlId="formBasicText">
     <Form.Label>Title</Form.Label>
@@ -73,6 +78,7 @@ const NewPost = () => {
   <Button variant="primary" type="submit">
     Add new post
   </Button>
+  {successMessage && <SuccessMessage />} 
 </Form>
 </form>
     </>

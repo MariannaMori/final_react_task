@@ -25,7 +25,7 @@ export default function NaviBar() {
         <Styles>
         <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
             <Container>
-            <Navbar.Brand>React Blog</Navbar.Brand>
+            <Navbar.Brand>Exploring with React20S</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="mr-auto">

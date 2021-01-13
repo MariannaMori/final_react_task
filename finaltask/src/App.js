@@ -2,6 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import NaviBar from './Components/Header/Navibar';
 import Footer from './Components/Footer/Footer';
+import './App.css';
 
 import {
   BrowserRouter as Router,
