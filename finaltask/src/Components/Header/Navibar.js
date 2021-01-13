@@ -50,7 +50,6 @@ export default function NaviBar() {
                 <Form.Group controlId="fromBasicEmail">
                         <Form.Label>Email Adress</Form.Label>
                         <Form.Control type="email" placeholder="Enter email" />
-                        <Form.Text className="text-muted">Put it here</Form.Text>
                     </Form.Group>
                     <Form.Group controlId="fromBasicPassword">
                         <Form.Label>Password</Form.Label>

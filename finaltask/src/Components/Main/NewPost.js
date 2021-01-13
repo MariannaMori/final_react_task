@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import { Form, Button, Col } from 'react-bootstrap';
+import { Form, Button, Container, } from 'react-bootstrap';
 import SuccessMessage from './SuccessMessage'
 
 const NewPost = () => {
@@ -29,60 +29,62 @@ const NewPost = () => {
       console.log(response.data);      
     });  
   };
-  
+
   return (
-    <>
-    <h1>Add new post</h1>
-    <form className="newPost" onSubmit={addPostShowSuccess}>
-      <Form>
-  <Form.Group controlId="formBasicText">
-    <Form.Label>Title</Form.Label>
-    <Col sm={10}>
-    <Form.Control type="text"
+    <Container id="newPost" className="d-flex justify-content-center">      
+      <Form className="newPost text-center m-5" onSubmit={addPostShowSuccess} >
+      <h1>Add new post</h1>
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label>Title</Form.Label>
+          <Form.Control 
+            type="text"
             name="title"
             id="title"
-            onChange={changeValueHandler}
-          />
-          </Col>
-  </Form.Group>
-  <Form.Group controlId="formBasicText">
-    <Form.Label>Author</Form.Label>
-    <Col sm={10}>
-    <Form.Control type="text"
+            onChange={changeValueHandler} 
+            maxLength={40}
+             />
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label>Author</Form.Label>
+          <Form.Control 
+            type="text"
             name="author"
             id="author"
             onChange={changeValueHandler}
-          />
-          </Col>
-  </Form.Group>
-  <Form.Group controlId="formBasicText">
-    <Form.Label>Description</Form.Label>
-    <Col sm={10}>
-    <Form.Control as="textarea" rows={4} type="text"
+            maxLength={40} />
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlTextarea1">
+          <Form.Label>Your post</Form.Label>
+          <Form.Control 
+            as="textarea" 
+            type="text"
             name="desc"
             id="desc"
             onChange={changeValueHandler}
-          />
-          </Col>
-  </Form.Group>
-  <Form.Group controlId="formBasicText">
-    <Form.Label>Image</Form.Label>
-    <Col sm={10}>
-    <Form.Control type="text"
+            rows={8} 
+            maxLength={800}
+            />
+        </Form.Group>
+        <Form.Group controlId="exampleForm.ControlInput1">
+          <Form.Label>Image URL</Form.Label>
+          <Form.Control 
+            type="text"
             name="img"
             id="img"
-            onChange={changeValueHandler}
-          />
-          </Col>
-  </Form.Group>
-  <Button variant="primary" type="submit">
-    Add new post
-  </Button>
-  {successMessage && <SuccessMessage />} 
-</Form>
-</form>
-    </>
+            onChange={changeValueHandler}>
+
+            </Form.Control>
+        </Form.Group>
+        <Button 
+          className="mb-2"
+          variant="primary"
+          type="submit">Submit new post       
+        </Button>
+        {successMessage && <SuccessMessage />}       
+      </Form>
+    </Container>          
   );
 };
 
 export default NewPost;
+
