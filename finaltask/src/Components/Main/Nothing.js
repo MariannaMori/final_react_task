@@ -5,10 +5,12 @@ import { Alert } from 'react-bootstrap';
 
 const Nothing = () => {
   return (
-    <Alert variant="info">
-    <Alert Here is nothing to see here go></Alert>
-     <Link to="/"> Home</Link>
-  </Alert>
+    <div>
+    <Alert variant="danger">
+        <Alert.Heading>Nothing was found!</Alert.Heading>
+    <Link to="/">Go to home page</Link>
+    </Alert>
+</div>
   );
 };
 
